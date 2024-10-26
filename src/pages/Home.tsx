@@ -31,6 +31,15 @@ export default function Home() {
 
 
     }
+    async function deleteHandler(id: string) {
+        await fetch(config.API_URL + "/organization/" + id, {
+            method: "DELETE",
+            headers: {
+                "Authorization": "Bearer " + token
+            }
+        })
+        loadData()
+    }
     useEffect(() => {
         if(!token) {
             nav("/login")
@@ -76,9 +85,14 @@ export default function Home() {
                                         <TableCell className="text-lg w-72 text-center">
                                             {org.organization_members.length}
                                         </TableCell>
-                                        <TableCell className="text-lg w-40 text-center">
+                                        <TableCell className="text-lg text-center flex gap-2">
                                             <Button className="text-lg" color="primary">
                                                 Invite
+                                            </Button>
+                                            <Button onClick={() => {
+                                                deleteHandler(org._id)
+                                            }} className="text-lg" color="danger">
+                                                Delete
                                             </Button>
                                         </TableCell>
                                     </TableRow>
