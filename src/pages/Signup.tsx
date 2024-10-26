@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import config from '../config.json'
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +10,9 @@ const Signup = () => {
 
     const [error, setError] = useState('')
     const nav = useNavigate()
-    const [loginDisabled, setLoginDisabled] = useState(false);
+    // const [loginDisabled, setLoginDisabled] = useState(false);
+
+    const [loginDisabled, _] = useState(false);
 
     const onSubmitLogin = async (e: any) => {
 

@@ -1,5 +1,4 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 interface AppContextType {
     token: string | undefined

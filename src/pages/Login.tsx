@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import config from '../config.json'
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
