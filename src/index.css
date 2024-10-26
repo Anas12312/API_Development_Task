@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=IM+Fell+French+Canon+SC&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+    font-family:"IMFellFrenchCanonSC-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("IMFellFrenchCanonSC-Regular"),
+    url('./assets/fonts/IMFellFrenchCanonSC-Regular.woff')format("woff")
+}
+@font-face {
+    font-family:"DancingScript";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DancingScript-VariableFont_wght"),
+    url('./assets/fonts/DancingScript-VariableFont_wght.woff')format("woff")
+}
